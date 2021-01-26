@@ -1,0 +1,16 @@
+brew install cabal-install
+brew install gh
+brew install git
+brew install haskell-stack
+brew install hugo
+brew install jq
+brew install mas
+brew install nasm
+brew install node
+brew install opam
+brew install python
+brew install rustup-init
+brew install tree
+brew install zsh-autosuggestions
+brew install zsh-git-prompt
+brew install zsh-history-substring-search
