@@ -25,7 +25,12 @@ pip3 install autopep8
 
 # ocaml
 opam init
+opam install -y utop
+opam install -y ocamlformat
+opam install -y ocaml-lsp-server
 opam install -y ocaml-base-compiler
+opam install -y merlin
+opam install -y core
 
 # rust
 rustup-init
