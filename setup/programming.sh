@@ -7,9 +7,9 @@ SHELL=/bin/zsh
 HOME=/Users/fraguinha
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 00 17 * * * { cd ~/GitHub/macbook && ./update.sh && ./commit.sh } &> /dev/null
-05 17 * * * { brew update && brew upgrade && brew upgrade --cask && brew cleanup } &> /dev/null
-10 17 * * * { opam update && opam upgrade -y && opam clean } &> /dev/null
-15 17 * * * { rustup update } &> /dev/null
+10 17 * * * { brew update && brew upgrade && brew upgrade --cask && brew cleanup } &> /dev/null
+20 17 * * * { opam update && opam upgrade -y && opam clean } &> /dev/null
+30 17 * * * { rustup update } &> /dev/null
 EOF
 
 # python
@@ -71,4 +71,5 @@ code \
     --install-extension fredhappyface.x8664assembly \
     --install-extension ecmel.vscode-html-css \
     --install-extension Dart-Code.flutter \
-    --install-extension Dart-Code.dart-code
+    --install-extension Dart-Code.dart-code \
+    --install-extension asvetliakov.vscode-neovim
