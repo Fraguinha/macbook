@@ -21,3 +21,7 @@ git --git-dir=$HOME/.dotfiles --work-tree=$HOME reset --hard
 
 # programming
 /bin/zsh -c "$(curl -fsSL https://raw.githubusercontent.com/Fraguinha/macbook/master/setup/programming.sh)"
+
+# macbook
+mkdir GitHub && cd GitHub
+git clone https://github.com/Fraguinha/macbook.git
