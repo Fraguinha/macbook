@@ -20,6 +20,7 @@ pip3 install pwntools
 pip3 install pip-chill
 pip3 install numpy
 pip3 install jupyter
+pip3 install flask
 pip3 install coverage
 pip3 install autopep8
 

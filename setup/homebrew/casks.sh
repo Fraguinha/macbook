@@ -1,6 +1,7 @@
 brew install --cask adobe-creative-cloud
 brew install --cask adoptopenjdk
 brew install --cask android-studio
+brew install --cask blackhole-2ch
 brew install --cask discord
 brew install --cask docker
 brew install --cask flutter
