@@ -33,9 +33,6 @@ opam install -y ocaml-base-compiler
 opam install -y merlin
 opam install -y core
 
-# rust
-rustup-init
-
 # neovim
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'

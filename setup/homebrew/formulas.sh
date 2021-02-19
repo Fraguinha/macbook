@@ -8,9 +8,8 @@ brew install mas
 brew install nasm
 brew install node
 brew install opam
-brew install pkg-config
 brew install python
-brew install rustup-init
+brew install rust
 brew install tree
 brew install zsh-autosuggestions
 brew install zsh-git-prompt
