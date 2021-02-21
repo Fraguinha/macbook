@@ -13,19 +13,20 @@ PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 EOF
 
 # python
-pip3 install virtualenv
-pip3 install pytest
-pip3 install pylint
-pip3 install pwntools
-pip3 install pip-chill
-pip3 install numpy
-pip3 install jupyter
-pip3 install flask
-pip3 install coverage
-pip3 install autopep8
+pip3 install -U virtualenv
+pip3 install -U pytest
+pip3 install -U pylint
+pip3 install -U pwntools
+pip3 install -U pip-chill
+pip3 install -U numpy
+pip3 install -U jupyter
+pip3 install -U flask
+pip3 install -U coverage
+pip3 install -U autopep8
 
 # ocaml
 opam init
+opam switch create 4.11.1
 opam install -y utop
 opam install -y ocamlformat
 opam install -y ocaml-lsp-server

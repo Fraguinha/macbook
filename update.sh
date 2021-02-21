@@ -51,18 +51,18 @@ sed -i '' -e "0$(sed -n '/^crontab <<EOF/=' setup/programming.sh),0$(sed -n '/^E
 sed -i '' -e '/opam install -y.*$/d' setup/programming.sh
 
 # add current package list
-opam list -s --roots | xargs -I '{}' sed -i '' -e '/^opam init/a\
+opam list -s --roots | xargs -I '{}' sed -i '' -e '/^opam switch create/a\
 opam install -y {}' setup/programming.sh
 
 
 ## Python
 
 # remove previous package list
-sed -i '' -e '/pip3 install.*$/d' setup/programming.sh
+sed -i '' -e '/pip3 install -U.*$/d' setup/programming.sh
 
 # add current package list
 pip-chill --no-version | xargs -I '{}' sed -i '' -e '/^# python/a\
-pip3 install {}' setup/programming.sh
+pip3 install -U {}' setup/programming.sh
 
 
 ## VSCode extensions
