@@ -7,7 +7,6 @@ brew install --cask discord
 brew install --cask docker
 brew install --cask flutter
 brew install --cask font-jetbrains-mono
-brew install --cask google-chrome
 brew install --cask gpg-suite
 brew install --cask karabiner-elements
 brew install --cask lastpass
@@ -23,5 +22,6 @@ brew install --cask syncplay
 brew install --cask transmission
 brew install --cask virtualbox
 brew install --cask visual-studio-code
+brew install --cask vivaldi
 brew install --cask vlc
 brew install --cask zoomus

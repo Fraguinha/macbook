@@ -26,7 +26,7 @@ pip3 install -U autopep8
 
 # ocaml
 opam init
-opam switch create 4.11.1
+opam switch create default 4.11.1
 opam install -y utop
 opam install -y ocamlformat
 opam install -y ocaml-lsp-server
@@ -71,4 +71,5 @@ code \
     --install-extension ecmel.vscode-html-css \
     --install-extension Dart-Code.flutter \
     --install-extension Dart-Code.dart-code \
+    --install-extension badochov.ocaml-formatter \
     --install-extension asvetliakov.vscode-neovim
