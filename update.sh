@@ -47,6 +47,14 @@ sed -i '' -e "0$(sed -n '/^crontab <<EOF/=' setup/programming.sh),0$(sed -n '/^E
 
 ## Opam
 
+# remove previous switch
+sed -i '' -e '/opam switch create.*$/d' setup/programming.sh
+
+# add latest switch
+opam switch list-available | grep "ocaml-base-compiler.*Official release" | \
+awk '{ printf("%s\n", $2) }' | tail -n 1 | xargs -I '{}' sed -i '' -e '/^opam init/a\
+opam switch create default {}' setup/programming.sh
+
 # remove previous package list
 sed -i '' -e '/opam install -y.*$/d' setup/programming.sh
 
