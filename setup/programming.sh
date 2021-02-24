@@ -51,6 +51,8 @@ code \
     --install-extension rust-lang.rust \
     --install-extension redhat.java \
     --install-extension ocamllabs.ocaml-platform \
+    --install-extension ms-vsliveshare.vsliveshare-pack \
+    --install-extension ms-vsliveshare.vsliveshare-audio \
     --install-extension ms-vsliveshare.vsliveshare \
     --install-extension ms-vscode.hexeditor \
     --install-extension ms-vscode.cpptools \

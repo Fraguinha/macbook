@@ -9,7 +9,6 @@ brew install --cask flutter
 brew install --cask font-jetbrains-mono
 brew install --cask gpg-suite
 brew install --cask karabiner-elements
-brew install --cask lastpass
 brew install --cask microsoft-auto-update
 brew install --cask microsoft-office
 brew install --cask microsoft-teams
