@@ -26,7 +26,7 @@ pip3 install -U autopep8
 
 # ocaml
 opam init
-opam switch create default 4.11.1
+opam switch create default 4.12.0
 opam install -y utop
 opam install -y ocamlformat
 opam install -y ocaml-lsp-server
@@ -37,6 +37,7 @@ opam install -y core
 # neovim
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+nvim +PlugInstall +qall
 
 # vscode
 code \
@@ -46,7 +47,6 @@ code \
     --install-extension vscjava.vscode-java-dependency \
     --install-extension vscjava.vscode-java-debug \
     --install-extension VisualStudioExptTeam.vscodeintellicode \
-    --install-extension tomoki1207.pdf \
     --install-extension SonarSource.sonarlint-vscode \
     --install-extension rust-lang.rust \
     --install-extension redhat.java \
@@ -65,6 +65,7 @@ code \
     --install-extension ms-azuretools.vscode-docker \
     --install-extension justusadam.language-haskell \
     --install-extension JHeilingbrunner.vscode-gnupg-tool \
+    --install-extension James-Yu.latex-workshop \
     --install-extension haskell.haskell \
     --install-extension GitLab.gitlab-workflow \
     --install-extension GitHub.vscode-pull-request-github \
@@ -73,5 +74,4 @@ code \
     --install-extension ecmel.vscode-html-css \
     --install-extension Dart-Code.flutter \
     --install-extension Dart-Code.dart-code \
-    --install-extension badochov.ocaml-formatter \
     --install-extension asvetliakov.vscode-neovim

@@ -1,13 +1,13 @@
-brew install cabal-install
 brew install gh
+brew install ghostscript
 brew install git
 brew install haskell-stack
-brew install hugo
 brew install jq
 brew install mas
 brew install nasm
 brew install node
 brew install opam
+brew install perl
 brew install python
 brew install rust
 brew install tree

@@ -9,8 +9,8 @@ brew install --cask flutter
 brew install --cask font-jetbrains-mono
 brew install --cask gpg-suite
 brew install --cask karabiner-elements
+brew install --cask mactex
 brew install --cask microsoft-auto-update
-brew install --cask microsoft-office
 brew install --cask microsoft-teams
 brew install --cask neovim-nightly
 brew install --cask signal
@@ -18,6 +18,8 @@ brew install --cask slack
 brew install --cask spotify
 brew install --cask stremio
 brew install --cask syncplay
+brew install --cask tex-live-utility
+brew install --cask tor-browser
 brew install --cask transmission
 brew install --cask virtualbox
 brew install --cask visual-studio-code
