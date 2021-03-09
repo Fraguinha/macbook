@@ -18,6 +18,7 @@ brew install --cask signal
 brew install --cask slack
 brew install --cask spotify
 brew install --cask stremio
+brew install --cask swiftbar
 brew install --cask syncplay
 brew install --cask tex-live-utility
 brew install --cask tor-browser

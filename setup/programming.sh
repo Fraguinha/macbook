@@ -47,6 +47,7 @@ code \
     --install-extension vscjava.vscode-java-dependency \
     --install-extension vscjava.vscode-java-debug \
     --install-extension VisualStudioExptTeam.vscodeintellicode \
+    --install-extension TabNine.tabnine-vscode \
     --install-extension SonarSource.sonarlint-vscode \
     --install-extension rust-lang.rust \
     --install-extension redhat.java \
