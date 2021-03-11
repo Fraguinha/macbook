@@ -2,7 +2,7 @@ brew install --cask adobe-creative-cloud
 brew install --cask adoptopenjdk
 brew install --cask android-studio
 brew install --cask bitcoin-core
-brew install --cask blackhole-2ch
+brew install --cask blackhole-16ch
 brew install --cask discord
 brew install --cask docker
 brew install --cask flutter
@@ -14,6 +14,8 @@ brew install --cask mactex
 brew install --cask microsoft-auto-update
 brew install --cask microsoft-teams
 brew install --cask neovim-nightly
+brew install --cask notion
+brew install --cask obs
 brew install --cask signal
 brew install --cask slack
 brew install --cask spotify
