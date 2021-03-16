@@ -1,7 +1,7 @@
+brew install cabal-install
 brew install gh
 brew install ghostscript
 brew install git
-brew install haskell-stack
 brew install jq
 brew install mas
 brew install nasm

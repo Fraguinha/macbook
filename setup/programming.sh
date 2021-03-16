@@ -6,10 +6,10 @@ crontab <<EOF
 SHELL=/bin/zsh
 HOME=/Users/fraguinha
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-00 17 * * * { cd ~/GitHub/macbook && ./update.sh && ./commit.sh } &> /dev/null
-10 17 * * * { brew update && brew upgrade && brew upgrade --cask && brew cleanup } &> /dev/null
-20 17 * * * { opam update && opam upgrade -y && opam clean } &> /dev/null
-30 17 * * * { rustup update } &> /dev/null
+00 17 * * * { brew update && brew upgrade && brew upgrade --cask && brew cleanup } &> /dev/null
+05 17 * * * { opam update && opam upgrade -y && opam clean } &> /dev/null
+10 17 * * * { rustup update } &> /dev/null
+00 18 * * * { cd ~/GitHub/macbook && ./update.sh && ./commit.sh } &> /dev/null
 EOF
 
 # python
@@ -47,6 +47,8 @@ code \
     --install-extension vscjava.vscode-java-dependency \
     --install-extension vscjava.vscode-java-debug \
     --install-extension VisualStudioExptTeam.vscodeintellicode \
+    --install-extension streetsidesoftware.code-spell-checker-portuguese \
+    --install-extension streetsidesoftware.code-spell-checker \
     --install-extension SonarSource.sonarlint-vscode \
     --install-extension rust-lang.rust \
     --install-extension redhat.java \

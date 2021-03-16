@@ -1,4 +1,3 @@
-brew install --cask adobe-creative-cloud
 brew install --cask adoptopenjdk
 brew install --cask android-studio
 brew install --cask bitcoin-core
@@ -17,7 +16,6 @@ brew install --cask neovim-nightly
 brew install --cask notion
 brew install --cask obs
 brew install --cask signal
-brew install --cask slack
 brew install --cask spotify
 brew install --cask stremio
 brew install --cask swiftbar
