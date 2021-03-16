@@ -8,5 +8,5 @@ if [[ -n $(git status -s) ]]; then
   git commit -m "$(date)"
 
   # Push changes
-  git push --force-with-lease origin master
+  git push origin master
 fi
