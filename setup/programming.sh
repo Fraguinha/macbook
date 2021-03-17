@@ -18,7 +18,7 @@ pip3 install -U pytest
 pip3 install -U pylint
 pip3 install -U pwntools
 pip3 install -U pip-chill
-pip3 install -U numpy
+pip3 install -U matplotlib
 pip3 install -U jupyter
 pip3 install -U flask
 pip3 install -U coverage
