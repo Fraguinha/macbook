@@ -40,3 +40,6 @@ python3 -c "print(f'Oven : {$OVEN:,.2f} ꜩ | href=\'https://tzkt.io/KT1AKcRY2F8
 python3 -c "print(f'Borrowed : {$KUSD/10**18:,.2f} $')"
 python3 -c "print(f'Stability fee : {((1*(1+.$INTEREST_RATE/513000)**(513000))-1)*100:.2f} %')"
 python3 -c "print(f'Collateral use : {((($KUSD)/10**18)/(($OVEN*$USD)/2))*100:,.2f} %')"
+echo "---"
+echo "Stats"
+echo "CoinGecko | href='https://www.coingecko.com/en/coins/tezos'"
