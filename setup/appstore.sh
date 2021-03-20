@@ -6,3 +6,4 @@ mas install 497799835 # Xcode
 mas install 803453959 # Slack
 mas install 441258766 # Magnet
 mas install 1320666476 # Wipr
+mas install 747648890 # Telegram
