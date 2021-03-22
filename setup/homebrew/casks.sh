@@ -4,14 +4,17 @@ brew install --cask bitcoin-core
 brew install --cask blackhole-16ch
 brew install --cask discord
 brew install --cask docker
+brew install --cask firefox
 brew install --cask flutter
 brew install --cask font-jetbrains-mono
 brew install --cask google-chrome
 brew install --cask gpg-suite
+brew install --cask ipfs
 brew install --cask karabiner-elements
 brew install --cask mactex
 brew install --cask microsoft-auto-update
 brew install --cask microsoft-teams
+brew install --cask multipass
 brew install --cask neovim-nightly
 brew install --cask notion
 brew install --cask obs
