@@ -4,11 +4,17 @@ brew install gh
 brew install ghostscript
 brew install git
 brew install jq
+brew install libtermkey
+brew install libvterm
+brew install luajit-openresty
+brew install luv
 brew install mas
+brew install msgpack
 brew install nasm
 brew install node
 brew install opam
 brew install perl
+brew install rtmpdump
 brew install rust
 brew install tree
 brew install zsh-autosuggestions
