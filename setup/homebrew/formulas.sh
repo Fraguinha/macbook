@@ -16,6 +16,7 @@ brew install opam
 brew install perl
 brew install rtmpdump
 brew install rust
+brew install texlab
 brew install tree
 brew install zsh-autosuggestions
 brew install zsh-git-prompt

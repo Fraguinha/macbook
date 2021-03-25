@@ -42,6 +42,7 @@ code \
     --install-extension vscjava.vscode-java-dependency \
     --install-extension vscjava.vscode-java-debug \
     --install-extension VisualStudioExptTeam.vscodeintellicode \
+    --install-extension tomoki1207.pdf \
     --install-extension streetsidesoftware.code-spell-checker-portuguese \
     --install-extension streetsidesoftware.code-spell-checker \
     --install-extension SonarSource.sonarlint-vscode \
@@ -62,12 +63,12 @@ code \
     --install-extension ms-azuretools.vscode-docker \
     --install-extension justusadam.language-haskell \
     --install-extension JHeilingbrunner.vscode-gnupg-tool \
-    --install-extension James-Yu.latex-workshop \
     --install-extension haskell.haskell \
     --install-extension GitLab.gitlab-workflow \
     --install-extension GitHub.vscode-pull-request-github \
     --install-extension GitHub.github-vscode-theme \
     --install-extension fredhappyface.x8664assembly \
+    --install-extension efoerster.texlab \
     --install-extension ecmel.vscode-html-css \
     --install-extension Dart-Code.flutter \
     --install-extension Dart-Code.dart-code \
