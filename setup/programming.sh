@@ -25,6 +25,8 @@ pip3 install -U coverage
 pip3 install -U autopep8
 
 # ocaml
+curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh | sh
+
 opam init
 opam switch create default 4.12.0
 opam install -y utop
@@ -34,7 +36,14 @@ opam install -y ocaml-base-compiler
 opam install -y merlin
 opam install -y core
 
+# haskell
+curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+
+# rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
 # vscode
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 code \
     --install-extension vscjava.vscode-maven \
     --install-extension vscjava.vscode-java-test \

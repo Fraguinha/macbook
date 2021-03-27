@@ -23,11 +23,9 @@ XTZ=$(echo $WALLET | jq --raw-output '.total_balance')
 # Kolibri
 OVEN=$(curl -sX GET "https://api.tzstats.com/explorer/account/$OVEN_ADDRESS")
 OVEN_STORAGE=$(curl -sX GET "https://api.tzstats.com/explorer/contract/$OVEN_ADDRESS/storage")
-MINTER_STORAGE=$(curl -sX GET "https://api.tzstats.com/explorer/contract/$MINTER_ADDRESS/storage")
 
 OVEN=$(echo $OVEN | jq --raw-output '.total_balance')
 KUSD=$(echo $OVEN_STORAGE | jq --raw-output '.value.borrowedTokens')
-INTEREST_RATE=$(echo $MINTER_STORAGE | jq --raw-output '.value.interestIndex')
 
 # Status
 python3 -c "print(f'ꜩ : {$EUR:,.2f} €')"
@@ -38,7 +36,6 @@ echo "---"
 echo "Kolibri"
 python3 -c "print(f'Oven : {$OVEN:,.2f} ꜩ | href=\'https://tzkt.io/KT1AKcRY2F8uZv5psx2gUm7AoTk8Cp6ei4hM/rewards\'')"
 python3 -c "print(f'Borrowed : {$KUSD/10**18:,.2f} $')"
-python3 -c "print(f'Stability fee : {((1*(1+.$INTEREST_RATE/513000)**(513000))-1)*100:.2f} %')"
 python3 -c "print(f'Collateral use : {((($KUSD)/10**18)/(($OVEN*$USD)/2))*100:,.2f} %')"
 echo "---"
 echo "Stats"
