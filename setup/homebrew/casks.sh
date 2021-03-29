@@ -24,6 +24,7 @@ brew install --cask stremio
 brew install --cask swiftbar
 brew install --cask syncplay
 brew install --cask tex-live-utility
+brew install --cask thunderbird
 brew install --cask tor-browser
 brew install --cask transmission
 brew install --cask virtualbox
