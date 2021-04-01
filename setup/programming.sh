@@ -16,9 +16,11 @@ EOF
 pip3 install -U virtualenv
 pip3 install -U pytest
 pip3 install -U pylint
+pip3 install -U pyinstaller-hooks-contrib
 pip3 install -U pwntools
 pip3 install -U pip-chill
 pip3 install -U matplotlib
+pip3 install -U macholib
 pip3 install -U jupyter
 pip3 install -U flask
 pip3 install -U coverage
@@ -51,6 +53,7 @@ code \
     --install-extension vscjava.vscode-java-dependency \
     --install-extension vscjava.vscode-java-debug \
     --install-extension VisualStudioExptTeam.vscodeintellicode \
+    --install-extension twxs.cmake \
     --install-extension tomoki1207.pdf \
     --install-extension streetsidesoftware.code-spell-checker-portuguese \
     --install-extension streetsidesoftware.code-spell-checker \
@@ -63,6 +66,7 @@ code \
     --install-extension ms-vsliveshare.vsliveshare \
     --install-extension ms-vscode.hexeditor \
     --install-extension ms-vscode.cpptools \
+    --install-extension ms-vscode.cmake-tools \
     --install-extension ms-vscode-remote.remote-ssh-edit \
     --install-extension ms-vscode-remote.remote-ssh \
     --install-extension ms-vscode-remote.remote-containers \
@@ -76,9 +80,9 @@ code \
     --install-extension GitLab.gitlab-workflow \
     --install-extension GitHub.vscode-pull-request-github \
     --install-extension GitHub.github-vscode-theme \
-    --install-extension fredhappyface.x8664assembly \
     --install-extension efoerster.texlab \
     --install-extension ecmel.vscode-html-css \
     --install-extension Dart-Code.flutter \
     --install-extension Dart-Code.dart-code \
-    --install-extension asvetliakov.vscode-neovim
+    --install-extension asvetliakov.vscode-neovim \
+    --install-extension 13xforever.language-x86-64-assembly
