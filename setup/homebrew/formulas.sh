@@ -1,3 +1,4 @@
+brew install dafny
 brew install ffmpeg
 brew install gh
 brew install ghostscript
