@@ -14,7 +14,6 @@ brew install --cask karabiner-elements
 brew install --cask mactex
 brew install --cask microsoft-auto-update
 brew install --cask microsoft-teams
-brew install --cask multipass
 brew install --cask neovim-nightly
 brew install --cask notion
 brew install --cask obs

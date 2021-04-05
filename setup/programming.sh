@@ -84,6 +84,5 @@ code \
     --install-extension ecmel.vscode-html-css \
     --install-extension Dart-Code.flutter \
     --install-extension Dart-Code.dart-code \
-    --install-extension correctnessLab.dafny-vscode \
     --install-extension asvetliakov.vscode-neovim \
     --install-extension 13xforever.language-x86-64-assembly
