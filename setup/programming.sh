@@ -7,7 +7,7 @@ SHELL=/bin/zsh
 HOME=/Users/fraguinha
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 00 17 * * * { brew update && brew upgrade && brew upgrade --cask && brew cleanup } &> /dev/null
-05 17 * * * { opam update && opam upgrade -y && opam clean } &> /dev/null
+05 17 * * * { opam update && opam depext && opam upgrade -y && opam clean } &> /dev/null
 10 17 * * * { rustup update } &> /dev/null
 00 18 * * * { cd ~/GitHub/macbook && ./update.sh && ./commit.sh } &> /dev/null
 EOF
@@ -16,11 +16,10 @@ EOF
 pip3 install -U virtualenv
 pip3 install -U pytest
 pip3 install -U pylint
-pip3 install -U pyinstaller-hooks-contrib
 pip3 install -U pwntools
 pip3 install -U pip-chill
+pip3 install -U networkx
 pip3 install -U matplotlib
-pip3 install -U macholib
 pip3 install -U jupyter
 pip3 install -U flask
 pip3 install -U coverage
@@ -36,6 +35,7 @@ opam install -y ocamlformat
 opam install -y ocaml-lsp-server
 opam install -y ocaml-base-compiler
 opam install -y merlin
+opam install -y depext
 opam install -y core
 
 # haskell
@@ -47,6 +47,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # vscode
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 code \
+    --install-extension VSpaceCode.whichkey \
     --install-extension vscjava.vscode-maven \
     --install-extension vscjava.vscode-java-test \
     --install-extension vscjava.vscode-java-pack \

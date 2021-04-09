@@ -25,6 +25,7 @@ brew install --cask syncplay
 brew install --cask tex-live-utility
 brew install --cask tor-browser
 brew install --cask transmission
+brew install --cask vanilla
 brew install --cask virtualbox
 brew install --cask visual-studio-code
 brew install --cask vlc
