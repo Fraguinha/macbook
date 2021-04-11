@@ -16,6 +16,7 @@ EOF
 pip3 install -U virtualenv
 pip3 install -U pytest
 pip3 install -U pylint
+pip3 install -U pycodestyle
 pip3 install -U pwntools
 pip3 install -U pip-chill
 pip3 install -U networkx
@@ -23,7 +24,7 @@ pip3 install -U matplotlib
 pip3 install -U jupyter
 pip3 install -U flask
 pip3 install -U coverage
-pip3 install -U autopep8
+pip3 install -U black
 
 # ocaml
 curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh | sh
