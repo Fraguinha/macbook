@@ -2,6 +2,7 @@ brew install --cask adoptopenjdk
 brew install --cask android-studio
 brew install --cask bitcoin-core
 brew install --cask blackhole-16ch
+brew install --cask cloudflare-warp
 brew install --cask discord
 brew install --cask docker
 brew install --cask firefox

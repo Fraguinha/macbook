@@ -57,19 +57,25 @@ python3 -c "\
 value=$OVEN/10**6*$EUR;
 print(f'Value: {value:,.2f} €')"
 echo "---"
-echo "Kolibri Profit/Loss"
 python3 -c "\
-value=($BOUGHT*$USD);
+value=$BOUGHT*$USD;
 debt=$MINTER_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36;
-diff=value-debt;
-print(f'{\"Profit\" if diff >= 0 else \"Loss\"}: {diff:,.2f} $ | color={\"darkgreen,green\" if diff >= 0 else \"darkred,red\"}')"
+diff=(value-debt)*($EUR/$USD);
+print(f'{\"Profit\" if diff >= 0 else \"Loss\"}: {diff:,.2f} € | color={\"darkgreen,green\" if diff >= 0 else \"darkred,red\"}')"
 python3 -c "\
 value=($BOUGHT*$USD);
 debt=$MINTER_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36;
 percentage=value/debt*100-100;
 print(f'Percentage: {percentage:,.2f} % | color={\"darkgreen,green\" if percentage >= 0 else \"darkred,red\"}')"
+python3 -c "\
+xtz=($OVEN/10**6);
+value=($OVEN/10**6*$USD);
+debt=$MINTER_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36;
+price=(2*debt/xtz)*($EUR/$USD);
+delta=$EUR-price;
+percentage=(debt/(value/2))*100;
+print(f'Margin: {delta:,.2f} € | {\"color=darkgreen,green\" if percentage <= 40 else \"color=darkorange,orange\" if 60 <= percentage < 80 else \"color=darkred,red\" if percentage >= 80 else \"\" }')"
 echo "---"
-echo "Kolibri Details"
 python3 -c "\
 initial=$MINTER_STABILITY/10**18+1;
 apr=1;
@@ -86,6 +92,11 @@ print(f'Interest: {interest:,.2f} $')"
 python3 -c "\
 borrowed=$KUSD/10**18;
 print(f'Borrowed: {borrowed:,.2f} $')"
+python3 -c "\
+xtz=($OVEN/10**6);
+debt=$MINTER_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36;
+price=(2*debt/xtz);
+print(f'Liquidation: {price:,.2f} $')"
 python3 -c "\
 value=($OVEN/10**6*$USD);
 debt=$MINTER_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36;
