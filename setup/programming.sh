@@ -57,6 +57,7 @@ code \
     --install-extension VisualStudioExptTeam.vscodeintellicode \
     --install-extension twxs.cmake \
     --install-extension tomoki1207.pdf \
+    --install-extension sumneko.lua \
     --install-extension streetsidesoftware.code-spell-checker-portuguese \
     --install-extension streetsidesoftware.code-spell-checker \
     --install-extension SonarSource.sonarlint-vscode \
