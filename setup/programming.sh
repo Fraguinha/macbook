@@ -45,6 +45,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
 # rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
+# emacs
+ln -s /usr/local/opt/emacs-plus/Emacs.app /Applications/Emacs.app
+
 # vscode
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 code \

@@ -47,16 +47,16 @@ print(f'Value: {value:,.2f} €')"
 echo "---"
 echo "Kolibri"
 python3 -c "\
-print(f'Tezos: {$BOUGHT:,.2f} ꜩ | href=\'https://tzkt.io/$WALLET_ADDRESS/rewards\'')"
-python3 -c "\
-value=$BOUGHT*$EUR;
-print(f'Value: {value:,.2f} €')"
-python3 -c "\
 print(f'Oven: {$OVEN/10**6:,.2f} ꜩ | href=\'https://tzkt.io/$OVEN_ADDRESS/rewards\'')"
 python3 -c "\
 value=$OVEN/10**6*$EUR;
 print(f'Value: {value:,.2f} €')"
 echo "---"
+python3 -c "\
+print(f'Bought: {$BOUGHT:,.2f} ꜩ')"
+python3 -c "\
+value=$BOUGHT*$EUR;
+print(f'Value: {value:,.2f} €')"
 python3 -c "\
 value=$BOUGHT*$USD;
 debt=$MINTER_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36;

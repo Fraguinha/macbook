@@ -1,3 +1,5 @@
+brew install coreutils
+brew install fd
 brew install ffmpeg
 brew install gh
 brew install ghostscript
@@ -9,6 +11,8 @@ brew install nasm
 brew install neovim
 brew install node
 brew install perl
+brew install emacs-mac
+brew install ripgrep
 brew install texlab
 brew install tree
 brew install zsh-autosuggestions
