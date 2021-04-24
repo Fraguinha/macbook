@@ -4,6 +4,7 @@ brew install --cask bitcoin-core
 brew install --cask blackhole-16ch
 brew install --cask discord
 brew install --cask docker
+brew install --cask emacs-mac
 brew install --cask firefox
 brew install --cask flutter
 brew install --cask font-jetbrains-mono
