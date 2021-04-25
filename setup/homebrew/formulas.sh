@@ -9,6 +9,7 @@ brew install nasm
 brew install neovim
 brew install node
 brew install perl
+brew install ripgrep
 brew install texlab
 brew install tree
 brew install zsh-autosuggestions

@@ -53,22 +53,6 @@ value=$OVEN/10**6*$EUR;
 print(f'Value: {value:,.2f} €')"
 echo "---"
 python3 -c "\
-print(f'Bought: {$BOUGHT:,.2f} ꜩ')"
-python3 -c "\
-value=$BOUGHT*$EUR;
-print(f'Value: {value:,.2f} €')"
-python3 -c "\
-value=$BOUGHT*$USD;
-debt=$MINTER_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36;
-diff=(value-debt)*($EUR/$USD);
-print(f'{\"Profit\" if diff >= 0 else \"Loss\"}: {diff:,.2f} € | color={\"darkgreen,green\" if diff >= 0 else \"darkred,red\"}')"
-python3 -c "\
-value=($BOUGHT*$USD);
-debt=$MINTER_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36;
-percentage=value/debt*100-100;
-print(f'Percentage: {percentage:,.2f} % | color={\"darkgreen,green\" if percentage >= 0 else \"darkred,red\"}')"
-echo "---"
-python3 -c "\
 initial=$MINTER_STABILITY/10**18+1;
 apr=1;
 for i in range(365*24*60):
@@ -89,11 +73,26 @@ value=($OVEN/10**6*$USD);
 debt=$MINTER_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36;
 percentage=(debt/(value/2))*100;
 print(f'Collateral use: {percentage:,.2f} % | {\"color=darkgreen,green\" if percentage <= 40 else \"color=darkorange,orange\" if 60 <= percentage < 80 else \"color=darkred,red\" if percentage >= 80 else \"\" }')"
+echo "---"
 python3 -c "\
-xtz=($OVEN/10**6);
+print(f'Bought: {$BOUGHT:,.2f} ꜩ')"
+python3 -c "\
+value=$BOUGHT*$EUR;
+print(f'Value: {value:,.2f} €')"
+python3 -c "\
+value=$BOUGHT*$USD;
 debt=$MINTER_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36;
-price=(2*debt/xtz);
-print(f'Liquidation: {price:,.2f} $')"
+diff=(value-debt)*($EUR/$USD);
+print(f'{\"Profit\" if diff >= 0 else \"Loss\"}: {diff:,.2f} € | color={\"darkgreen,green\" if diff >= 0 else \"darkred,red\"}')"
+python3 -c "\
+value=($BOUGHT*$USD);
+debt=$MINTER_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36;
+percentage=value/debt*100-100;
+print(f'Percentage: {percentage:,.2f} % | color={\"darkgreen,green\" if percentage >= 0 else \"darkred,red\"}')"
+echo "---"
+python3 -c "\
+price=$USD;
+print(f'Price: {price:,.2f} $')"
 python3 -c "\
 xtz=($OVEN/10**6);
 value=($OVEN/10**6*$USD);
@@ -102,6 +101,11 @@ price=(2*debt/xtz);
 delta=$USD-price;
 percentage=(debt/(value/2))*100;
 print(f'Margin: {delta:,.2f} $ | {\"color=darkgreen,green\" if percentage <= 40 else \"color=darkorange,orange\" if 60 <= percentage < 80 else \"color=darkred,red\" if percentage >= 80 else \"\" }')"
+python3 -c "\
+xtz=($OVEN/10**6);
+debt=$MINTER_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36;
+price=(2*debt/xtz);
+print(f'Liquidation: {price:,.2f} $')"
 echo "---"
 echo "Stats"
 echo "CoinGecko | href='https://www.coingecko.com/en/coins/tezos'"

@@ -32,6 +32,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/ocaml/opa
 opam init
 opam switch create default 4.12.0
 opam install -y utop
+opam install -y ocp-indent
 opam install -y ocamlformat
 opam install -y ocaml-lsp-server
 opam install -y ocaml-base-compiler
