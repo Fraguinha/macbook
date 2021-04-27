@@ -1,4 +1,3 @@
-
 # Configurations
 # <swiftbar.hideSwiftBar>true</swiftbar.hideSwiftBar>
 # <swiftbar.hideRunInTerminal>true</swiftbar.hideRunInTerminal>
@@ -36,15 +35,38 @@ value=($BOUGHT*$USD);
 debt=$MINTER_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36;
 percentage=value/debt*100-100;
 print(f'K$ : {percentage:,.2f} %')" 
+
+echo "---"
+echo "Loan"
+
+python3 -c "\
+print(f'Bought: {$BOUGHT:,.2f} ꜩ')"
+python3 -c "\
+value=$BOUGHT*$EUR;
+print(f'Value: {value:,.2f} €')"
+python3 -c "\
+value=$BOUGHT*$USD;
+debt=$MINTER_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36;
+diff=(value-debt)*($EUR/$USD);
+print(f'{\"Profit\" if diff >= 0 else \"Loss\"}: {diff:,.2f} € | color={\"darkgreen,green\" if diff >= 0 else \"darkred,red\"}')"
+python3 -c "\
+value=($BOUGHT*$USD);
+debt=$MINTER_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36;
+percentage=value/debt*100-100;
+print(f'Percentage: {percentage:,.2f} % | color={\"darkgreen,green\" if percentage >= 0 else \"darkred,red\"}')"
+
 echo "---"
 echo "Oven"
+
 python3 -c "\
 print(f'Tezos: {$OVEN/10**6:,.2f} ꜩ | href=\'https://tzkt.io/$OVEN_ADDRESS/rewards\'')"
 python3 -c "\
 value=$OVEN/10**6*$EUR;
 print(f'Value: {value:,.2f} €')"
+
 echo "---"
 echo "Protocol"
+
 python3 -c "\
 initial=$MINTER_STABILITY/10**18+1;
 apr=1;
@@ -66,25 +88,10 @@ value=($OVEN/10**6*$USD);
 debt=$MINTER_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36;
 percentage=(debt/(value/2))*100;
 print(f'Collateral use: {percentage:,.2f} % | {\"color=darkgreen,green\" if percentage <= 40 else \"color=darkorange,orange\" if 60 <= percentage < 80 else \"color=darkred,red\" if percentage >= 80 else \"\" }')"
-echo "---"
-echo "Loan"
-python3 -c "\
-print(f'Bought: {$BOUGHT:,.2f} ꜩ')"
-python3 -c "\
-value=$BOUGHT*$EUR;
-print(f'Value: {value:,.2f} €')"
-python3 -c "\
-value=$BOUGHT*$USD;
-debt=$MINTER_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36;
-diff=(value-debt)*($EUR/$USD);
-print(f'{\"Profit\" if diff >= 0 else \"Loss\"}: {diff:,.2f} € | color={\"darkgreen,green\" if diff >= 0 else \"darkred,red\"}')"
-python3 -c "\
-value=($BOUGHT*$USD);
-debt=$MINTER_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36;
-percentage=value/debt*100-100;
-print(f'Percentage: {percentage:,.2f} % | color={\"darkgreen,green\" if percentage >= 0 else \"darkred,red\"}')"
+
 echo "---"
 echo "Risk"
+
 python3 -c "\
 price=$USD;
 print(f'Price: {price:,.2f} $')"

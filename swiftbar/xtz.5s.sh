@@ -20,13 +20,28 @@ XTZ=$(echo $WALLET | jq --raw-output '.balance')
 # Status
 python3 -c "\
 print(f'ꜩ : {$EUR:,.2f} €')"
+
 echo "---"
 echo "Wallet"
+
 python3 -c "\
 print(f'Tezos: {$XTZ/10**6:,.2f} ꜩ | href=\'https://tzkt.io/$WALLET_ADDRESS/rewards\'')"
 python3 -c "\
 value=$XTZ/10**6*$EUR;
 print(f'Value: {value:,.2f} €')"
+
+echo "---"
+echo "Dex"
+
+echo "QuipuSwap | href='https://quipuswap.com/swap'"
+echo "Dexter | href='https://app.dexter.exchange'"
+
+echo "---"
+echo "DeFi"
+
+echo "Kolibri | href='https://kolibri.finance'"
+
 echo "---"
 echo "Stats"
+
 echo "CoinGecko | href='https://www.coingecko.com/en/coins/tezos'"

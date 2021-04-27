@@ -1,3 +1,4 @@
+brew install cmake
 brew install fd
 brew install ffmpeg
 brew install gh
