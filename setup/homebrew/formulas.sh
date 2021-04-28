@@ -10,8 +10,10 @@ brew install mas
 brew install nasm
 brew install neovim
 brew install node
+brew install pandoc
 brew install perl
 brew install ripgrep
+brew install shellcheck
 brew install texlab
 brew install tree
 brew install zsh-autosuggestions
