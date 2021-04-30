@@ -52,7 +52,6 @@ ln -s /usr/local/opt/emacs-plus/Emacs.app /Applications/Emacs.app
 # vscode
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 code \
-    --install-extension VSpaceCode.whichkey \
     --install-extension vscjava.vscode-maven \
     --install-extension vscjava.vscode-java-test \
     --install-extension vscjava.vscode-java-pack \
@@ -82,8 +81,9 @@ code \
     --install-extension ms-python.python \
     --install-extension ms-azuretools.vscode-docker \
     --install-extension justusadam.language-haskell \
-    --install-extension JHeilingbrunner.vscode-gnupg-tool \
+    --install-extension hediet.debug-visualizer \
     --install-extension haskell.haskell \
+    --install-extension Gruntfuggly.todo-tree \
     --install-extension GitLab.gitlab-workflow \
     --install-extension GitHub.vscode-pull-request-github \
     --install-extension GitHub.github-vscode-theme \
@@ -92,4 +92,5 @@ code \
     --install-extension Dart-Code.flutter \
     --install-extension Dart-Code.dart-code \
     --install-extension asvetliakov.vscode-neovim \
+    --install-extension alefragnani.Bookmarks \
     --install-extension 13xforever.language-x86-64-assembly
