@@ -18,13 +18,13 @@ USD=$(echo $PRICE | jq --raw-output '.tezos.usd')
 # Kolibri
 MINTER_STORAGE=$(curl -sX GET "https://api.tzkt.io/v1/contracts/$MINTER_ADDRESS/storage")
 
-OVEN=$(curl -sX GET "https://api.tzkt.io/v1/contracts/$OVEN_ADDRESS")
+OVEN_CONTRACT=$(curl -sX GET "https://api.tzkt.io/v1/contracts/$OVEN_ADDRESS")
 OVEN_STORAGE=$(curl -sX GET "https://api.tzkt.io/v1/contracts/$OVEN_ADDRESS/storage")
 
 MINTER_INTEREST=$(echo $MINTER_STORAGE | jq --raw-output '.interestIndex')
 MINTER_STABILITY=$(echo $MINTER_STORAGE | jq --raw-output '.stabilityFee')
 
-OVEN=$(echo $OVEN | jq --raw-output '.balance')
+OVEN=$(echo $OVEN_CONTRACT | jq --raw-output '.balance')
 KUSD=$(echo $OVEN_STORAGE | jq --raw-output '.borrowedTokens')
 OVEN_INTEREST=$(echo $OVEN_STORAGE | jq --raw-output '.interestIndex')
 OVEN_FEE=$(echo $OVEN_STORAGE | jq --raw-output '.stabilityFeeTokens')
@@ -34,7 +34,7 @@ python3 -c "\
 value=($BOUGHT*$USD);
 debt=$MINTER_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36;
 percentage=value/debt*100-100;
-print(f'K$ : {percentage:,.2f} %')" 
+print(f'K$ : {percentage:,.2f} %')"
 
 echo "---"
 echo "Loan"
