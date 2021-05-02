@@ -20,16 +20,13 @@ WALLET=$(curl -sX GET "https://api.tzkt.io/v1/accounts/$WALLET_ADDRESS")
 XTZ=$(echo $WALLET | jq --raw-output '.balance')
 
 # Oven
-OVEN_CONTRACT=$(curl -sX GET "https://api.tzkt.io/v1/contracts/$OVEN_ADDRESS")
-OVEN_XTZ=$(echo $OVEN_CONTRACT | jq --raw-output '.balance')
+OVEN=$(curl -sX GET "https://api.tzkt.io/v1/contracts/$OVEN_ADDRESS")
+OVEN_XTZ=$(echo $OVEN | jq --raw-output '.balance')
 
 # Status
 python3 -c "\
 value=($XTZ+$OVEN_XTZ)/10**6*$EUR; \
-investment=$INVESTMENT; \
-growth=value-investment; \
-percentage=growth*100/investment; \
-print(f'ꜩ : {$EUR:,.2f} € ( {percentage:,.2f} % )')"
+print(f'ꜩ : {$EUR:,.2f} €')"
 
 echo "---"
 echo "Wallet"
@@ -39,6 +36,33 @@ print(f'Tezos: {$XTZ/10**6:,.2f} ꜩ | href=\'https://tzkt.io/$WALLET_ADDRESS/re
 python3 -c "\
 value=$XTZ/10**6*$EUR;
 print(f'Value: {value:,.2f} €')"
+
+echo "---"
+echo "Oven"
+
+python3 -c "\
+print(f'Tezos: {$OVEN_XTZ/10**6:,.2f} ꜩ | href=\'https://tzkt.io/$OVEN_ADDRESS/rewards\'')"
+python3 -c "\
+value=$OVEN_XTZ/10**6*$EUR;
+print(f'Value: {value:,.2f} €')"
+
+echo "---"
+echo "Investment"
+
+python3 -c "\
+print(f'Bought: {$INVESTMENT:,.2f} €')"
+python3 -c "\
+value=($XTZ+$OVEN_XTZ)/10**6*$EUR;
+print(f'Value: {value:,.2f} €')"
+python3 -c "\
+value=($XTZ+$OVEN_XTZ)/10**6*$EUR;
+diff=value-$INVESTMENT;
+print(f'{\"Profit\" if diff >= 0 else \"Loss\"}: {diff:,.2f} € | color={\"darkgreen,green\" if diff >= 0 else \"darkred,red\"}')"
+python3 -c "\
+value=($XTZ+$OVEN_XTZ)/10**6*$EUR;
+diff=value-$INVESTMENT; \
+percentage=diff*100/$INVESTMENT; \
+print(f'Percentage: {percentage:,.2f} % | color={\"darkgreen,green\" if percentage >= 0 else \"darkred,red\"}')"
 
 echo "---"
 echo "Dex"

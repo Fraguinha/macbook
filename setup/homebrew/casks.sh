@@ -1,11 +1,9 @@
 brew install --cask adoptopenjdk
 brew install --cask android-studio
 brew install --cask bitcoin-core
-brew install --cask blackhole-16ch
 brew install --cask discord
 brew install --cask docker
 brew install --cask emacs-mac
-brew install --cask firefox
 brew install --cask flutter
 brew install --cask font-jetbrains-mono
 brew install --cask google-chrome
@@ -18,7 +16,6 @@ brew install --cask microsoft-excel
 brew install --cask microsoft-teams
 brew install --cask neovim-nightly
 brew install --cask notion
-brew install --cask obs
 brew install --cask signal
 brew install --cask spotify
 brew install --cask stremio
@@ -27,7 +24,6 @@ brew install --cask syncplay
 brew install --cask tex-live-utility
 brew install --cask tor-browser
 brew install --cask transmission
-brew install --cask vanilla
 brew install --cask virtualbox
 brew install --cask visual-studio-code
 brew install --cask vlc
