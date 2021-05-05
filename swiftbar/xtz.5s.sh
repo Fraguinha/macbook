@@ -10,10 +10,9 @@ WALLET_ADDRESS='tz1VjYmQHw4QE6tYTQLLfWNjqkUNwMC7YPoF'
 OVEN_ADDRESS='KT1AKcRY2F8uZv5psx2gUm7AoTk8Cp6ei4hM'
 
 # Price
-PRICE=$(curl -sX GET 'https://api.coingecko.com/api/v3/simple/price?ids=tezos&vs_currencies=eur,usd')
+PRICE=$(curl -sX GET 'https://api.coingecko.com/api/v3/simple/price?ids=tezos&vs_currencies=eur')
 
 EUR=$(echo $PRICE | jq --raw-output '.tezos.eur')
-USD=$(echo $PRICE | jq --raw-output '.tezos.usd')
 
 # Wallet
 WALLET=$(curl -sX GET "https://api.tzkt.io/v1/accounts/$WALLET_ADDRESS")
@@ -63,20 +62,3 @@ value=($XTZ+$OVEN_XTZ)/10**6*$EUR;
 diff=value-$INVESTMENT; \
 percentage=diff*100/$INVESTMENT; \
 print(f'Percentage: {percentage:,.2f} % | color={\"darkgreen,green\" if percentage >= 0 else \"darkred,red\"}')"
-
-echo "---"
-echo "Dex"
-
-echo "QuipuSwap | href='https://quipuswap.com/swap'"
-echo "Dexter | href='https://app.dexter.exchange'"
-
-echo "---"
-echo "DeFi"
-
-echo "Kolibri | href='https://kolibri.finance'"
-echo "Wrap | href='https://www.benderlabs.io/'"
-
-echo "---"
-echo "Stats"
-
-echo "CoinGecko | href='https://www.coingecko.com/en/coins/tezos'"

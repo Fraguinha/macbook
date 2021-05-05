@@ -13,18 +13,24 @@ PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 EOF
 
 # python
+pip3 install -U webcolors
 pip3 install -U virtualenv
+pip3 install -U typed-ast
+pip3 install -U rfc3987
+pip3 install -U regex
+pip3 install -U pytezos
 pip3 install -U pytest
 pip3 install -U pylint
-pip3 install -U pycodestyle
 pip3 install -U pwntools
 pip3 install -U pip-chill
+pip3 install -U pathspec
 pip3 install -U networkx
 pip3 install -U matplotlib
 pip3 install -U jupyter
+pip3 install -U jsonpointer
 pip3 install -U flask
 pip3 install -U coverage
-pip3 install -U black
+pip3 install -U autopep8
 
 # ocaml
 curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/ocaml/opam/master/shell/install.sh | sh
@@ -83,7 +89,6 @@ code \
     --install-extension justusadam.language-haskell \
     --install-extension hediet.debug-visualizer \
     --install-extension haskell.haskell \
-    --install-extension Gruntfuggly.todo-tree \
     --install-extension GitLab.gitlab-workflow \
     --install-extension GitHub.vscode-pull-request-github \
     --install-extension GitHub.github-vscode-theme \

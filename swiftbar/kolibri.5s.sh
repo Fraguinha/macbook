@@ -91,9 +91,9 @@ xtz=($OVEN/10**6);
 value=($OVEN/10**6*$USD);
 debt=$KOLIBRI_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36;
 price=(2*debt/xtz);
-delta=$USD-price;
+margin=$USD-price;
 percentage=(debt/(value/2))*100;
-print(f'Margin: {delta:,.2f} $ | {\"color=darkgreen,green\" if percentage <= 40 else \"color=darkorange,orange\" if 60 <= percentage < 80 else \"color=darkred,red\" if percentage >= 80 else \"\" }')"
+print(f'Margin: {margin:,.2f} $ | {\"color=darkgreen,green\" if percentage <= 40 else \"color=darkorange,orange\" if 60 <= percentage < 80 else \"color=darkred,red\" if percentage >= 80 else \"\" }')"
 python3 -c "\
 xtz=($OVEN/10**6);
 debt=$KOLIBRI_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36;

@@ -5,4 +5,5 @@
 # <swiftbar.hideAbout>true</swiftbar.hideAbout>
 
 # Status
-python3 -c "import datetime;print(f'BFFF : {(datetime.datetime(2021, 9, 12) - datetime.datetime.now()).days} days')"
+# python3 -c "import datetime;print(f'BFFF : {(datetime.datetime(2021, 9, 12) - datetime.datetime.now()).days} days')"
+python3 -c "import datetime;print(f'SSSA : {(datetime.datetime(2021, 9, 12) - datetime.datetime.now()).days} days')"

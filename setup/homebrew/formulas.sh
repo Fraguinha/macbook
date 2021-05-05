@@ -1,5 +1,7 @@
+brew install automake
 brew install berkeley-db
 brew install cmake
+brew install libsecp256k1
 brew install fd
 brew install ffmpeg
 brew install gh
