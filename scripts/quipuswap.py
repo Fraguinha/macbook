@@ -23,32 +23,13 @@ def get_price(ticker, block_id='head'):
   return price
 
 
-def plot_price(ticker, days, step):
-  blocks = days * 24 * 60
-  data = []
-  for i in range(blocks, 0, -step):
-    data.append(get_price(ticker, -i))
-
-  plt.plot(range(days * (blocks / days * step), data)
-
-  plt.xlabel('')
-  plt.ylabel(f'ꜩ to {ticker}')
-  plt.legend()
-  plt.title(f'{ticker} ꜩ price')
-
-  plt.show()
-
-
 if __name__ == '__main__':
   import sys
   if len(sys.argv) == 1:
     for ticker in contracts:
-      price=get_price(ticker)
+      price = get_price(ticker)
       print(f'{ticker} : {price:,.2f} ꜩ')
-  elif sys.argv[1] != 'plot':
-    ticker=sys.argv[1]
-    price=get_price(ticker)
+  else:
+    ticker = sys.argv[1]
+    price = get_price(ticker)
     print(f'{ticker} : {price:,.2f} ꜩ')
-  elif sys.argv[1] == 'plot':
-    ticker=sys.argv[2]
-    plot_price(ticker, 7, 60)
