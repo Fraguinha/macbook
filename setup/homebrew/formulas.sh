@@ -14,6 +14,7 @@ brew install nasm
 brew install neovim
 brew install node
 brew install pandoc
+brew install pypy3
 brew install ripgrep
 brew install shellcheck
 brew install texlab
