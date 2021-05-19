@@ -5,7 +5,7 @@
 # <swiftbar.hideAbout>true</swiftbar.hideAbout>
 
 # Variables
-BOUGHT='2610.5'
+BOUGHT='2610.5' # xtz
 OVEN_ADDRESS='KT1AKcRY2F8uZv5psx2gUm7AoTk8Cp6ei4hM'
 KOLIBRI_ADDRESS='KT1Ty2uAmF5JxWyeGrVpk17MEyzVB8cXs8aJ'
 

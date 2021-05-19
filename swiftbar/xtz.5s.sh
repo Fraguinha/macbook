@@ -5,7 +5,8 @@
 # <swiftbar.hideAbout>true</swiftbar.hideAbout>
 
 # Variables
-INVESTMENT=40800
+INVESTMENT=40800 # euro
+LIABILITY=12610.5 # xtz
 WALLET_ADDRESS='tz1VjYmQHw4QE6tYTQLLfWNjqkUNwMC7YPoF'
 OVEN_ADDRESS='KT1AKcRY2F8uZv5psx2gUm7AoTk8Cp6ei4hM'
 
@@ -54,11 +55,13 @@ python3 -c "\
 value=($XTZ+$OVEN_XTZ)/10**6*$EUR;
 print(f'Value: {value:,.2f} €')"
 python3 -c "\
-value=($XTZ+$OVEN_XTZ)/10**6*$EUR;
-diff=value-$INVESTMENT;
+value=($XTZ+$OVEN_XTZ)/10**6*$EUR; \
+liability=$LIABILITY*$EUR; \
+diff=value-$INVESTMENT-liability; \
 print(f'{\"Profit\" if diff >= 0 else \"Loss\"}: {diff:,.2f} € | color={\"darkgreen,green\" if diff >= 0 else \"darkred,red\"}')"
 python3 -c "\
-value=($XTZ+$OVEN_XTZ)/10**6*$EUR;
-diff=value-$INVESTMENT; \
+value=($XTZ+$OVEN_XTZ)/10**6*$EUR; \
+liability=$LIABILITY*$EUR; \
+diff=value-$INVESTMENT-liability; \
 percentage=diff*100/$INVESTMENT; \
 print(f'Percentage: {percentage:,.2f} % | color={\"darkgreen,green\" if percentage >= 0 else \"darkred,red\"}')"
