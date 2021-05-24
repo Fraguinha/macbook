@@ -1,7 +1,5 @@
 brew install automake
-brew install berkeley-db
 brew install cmake
-brew install libsecp256k1
 brew install fd
 brew install ffmpeg
 brew install gh
@@ -15,7 +13,6 @@ brew install neovim
 brew install node
 brew install pandoc
 brew install pypy3
-brew install ripgrep
 brew install shellcheck
 brew install texlab
 brew install tree

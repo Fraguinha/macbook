@@ -18,6 +18,7 @@ brew install --cask neovim-nightly
 brew install --cask notion
 brew install --cask signal
 brew install --cask spotify
+brew install --cask steam
 brew install --cask stremio
 brew install --cask swiftbar
 brew install --cask syncplay

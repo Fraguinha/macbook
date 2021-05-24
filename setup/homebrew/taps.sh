@@ -1,4 +1,3 @@
-brew tap cuber/libsecp256k1
 brew tap fraguinha/fraguinha
 brew tap github/gh
 brew tap homebrew/cask
