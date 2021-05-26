@@ -15,6 +15,7 @@ brew install --cask microsoft-auto-update
 brew install --cask microsoft-excel
 brew install --cask microsoft-teams
 brew install --cask neovim-nightly
+brew install --cask netbeans
 brew install --cask notion
 brew install --cask signal
 brew install --cask spotify
