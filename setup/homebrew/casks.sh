@@ -1,4 +1,5 @@
 brew install --cask adoptopenjdk
+brew install --cask adoptopenjdk8
 brew install --cask android-studio
 brew install --cask bitcoin-core
 brew install --cask discord
