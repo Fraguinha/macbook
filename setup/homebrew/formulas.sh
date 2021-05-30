@@ -11,6 +11,7 @@ brew install mas
 brew install nasm
 brew install neovim
 brew install node
+brew install openjdk
 brew install pandoc
 brew install pypy3
 brew install shellcheck
