@@ -1,5 +1,6 @@
 mas install 1295203466 # Microsoft
 mas install 1352778147 # Bitwarden
+mas install 1511962480 # Galleon
 mas install 937984704 # Amphetamine
 mas install 1444383602 # GoodNotes
 mas install 497799835 # Xcode

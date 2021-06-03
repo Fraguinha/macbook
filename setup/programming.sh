@@ -48,6 +48,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 # vscode
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 code \
+    --install-extension Zignd.html-css-class-completion \
     --install-extension vscjava.vscode-maven \
     --install-extension vscjava.vscode-java-test \
     --install-extension vscjava.vscode-java-pack \
@@ -62,6 +63,7 @@ code \
     --install-extension SonarSource.sonarlint-vscode \
     --install-extension rust-lang.rust \
     --install-extension redhat.java \
+    --install-extension ow.vscode-subword-navigation \
     --install-extension ocamllabs.ocaml-platform \
     --install-extension ms-vsliveshare.vsliveshare-pack \
     --install-extension ms-vsliveshare.vsliveshare-audio \
@@ -83,7 +85,6 @@ code \
     --install-extension GitHub.vscode-pull-request-github \
     --install-extension GitHub.github-vscode-theme \
     --install-extension efoerster.texlab \
-    --install-extension ecmel.vscode-html-css \
     --install-extension Dart-Code.flutter \
     --install-extension Dart-Code.dart-code \
     --install-extension asvetliakov.vscode-neovim \
