@@ -6,7 +6,6 @@ brew install --cask discord
 brew install --cask docker
 brew install --cask flutter
 brew install --cask font-jetbrains-mono
-brew install --cask google-chrome
 brew install --cask gpg-suite
 brew install --cask ipfs
 brew install --cask karabiner-elements
