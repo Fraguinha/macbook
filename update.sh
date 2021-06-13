@@ -28,7 +28,7 @@ chmod +x setup/homebrew/casks.sh
 
 
 ## appstore.sh
-mas list | awk '{ printf("%s # %s\n", $1, $2) }' | xargs -I '{}' echo 'mas install {}' > setup/appstore.sh
+mas list | awk '{ printf("%s #", $1); $1=""; NF-=1; print $0 }' | xargs -I '{}' echo 'mas install {}' > setup/appstore.sh
 
 
 
@@ -71,6 +71,16 @@ sed -i '' -e '/pip3 install -U.*$/d' setup/programming.sh
 # add current package list
 pip-chill --no-version | xargs -I '{}' sed -i '' -e '/^# python/a\
 pip3 install -U {}' setup/programming.sh
+
+
+# Javascript
+
+# remove previous package list
+sed -i '' -e '/npm i -g.*$/d' setup/programming.sh
+
+# add current package list
+npm list -g --depth 0 | awk '{ printf("%s\n", $2) }' | cut -d "@" -f 1 | xargs -I '{}' sed -i '' -e '/^# javascript/a\
+npm i -g {}' setup/programming.sh
 
 
 ## VSCode extensions

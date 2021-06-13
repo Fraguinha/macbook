@@ -7,6 +7,7 @@ brew install ghostscript
 brew install git
 brew install jq
 brew install llvm
+brew install luarocks
 brew install mas
 brew install nasm
 brew install neovim
