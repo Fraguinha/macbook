@@ -61,7 +61,6 @@ code \
     --install-extension VisualStudioExptTeam.vscodeintellicode \
     --install-extension twxs.cmake \
     --install-extension sumneko.lua \
-    --install-extension streetsidesoftware.code-spell-checker \
     --install-extension SonarSource.sonarlint-vscode \
     --install-extension rust-lang.rust \
     --install-extension redhat.java \
@@ -89,5 +88,6 @@ code \
     --install-extension Dart-Code.flutter \
     --install-extension Dart-Code.dart-code \
     --install-extension asvetliakov.vscode-neovim \
+    --install-extension analytic-signal.preview-pdf \
     --install-extension alefragnani.Bookmarks \
     --install-extension 13xforever.language-x86-64-assembly
