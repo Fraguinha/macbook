@@ -79,7 +79,6 @@ code \
     --install-extension ms-python.python \
     --install-extension ms-azuretools.vscode-docker \
     --install-extension justusadam.language-haskell \
-    --install-extension hediet.debug-visualizer \
     --install-extension haskell.haskell \
     --install-extension GitLab.gitlab-workflow \
     --install-extension GitHub.vscode-pull-request-github \
@@ -88,6 +87,4 @@ code \
     --install-extension Dart-Code.flutter \
     --install-extension Dart-Code.dart-code \
     --install-extension asvetliakov.vscode-neovim \
-    --install-extension analytic-signal.preview-pdf \
-    --install-extension alefragnani.Bookmarks \
-    --install-extension 13xforever.language-x86-64-assembly
+    --install-extension analytic-signal.preview-pdf
