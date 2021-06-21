@@ -17,7 +17,10 @@ curl --proto '=https' --tlsv1.2 -sSf https://raw.githubusercontent.com/ocaml/opa
 
 opam init
 opam switch create default 4.12.0
+opam install -y z3
+opam install -y why3-ide
 opam install -y utop
+opam install -y sha
 opam install -y ocp-indent
 opam install -y ocamlformat
 opam install -y ocaml-lsp-server
@@ -25,6 +28,8 @@ opam install -y ocaml-base-compiler
 opam install -y merlin
 opam install -y depext
 opam install -y core
+opam install -y coqide
+opam install -y alt-ergo
 
 # haskell
 curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
@@ -86,5 +91,4 @@ code \
     --install-extension efoerster.texlab \
     --install-extension Dart-Code.flutter \
     --install-extension Dart-Code.dart-code \
-    --install-extension asvetliakov.vscode-neovim \
     --install-extension analytic-signal.preview-pdf
