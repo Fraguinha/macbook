@@ -1,15 +1,14 @@
 brew install adwaita-icon-theme
 brew install automake
+brew install cask
 brew install cmake
 brew install cvc4
-brew install eprover
 brew install expat
 brew install fd
 brew install ffmpeg
 brew install gh
 brew install ghostscript
 brew install git
-brew install gperf
 brew install gtksourceview
 brew install gtksourceview3
 brew install jq

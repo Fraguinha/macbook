@@ -19,6 +19,7 @@ opam init
 opam switch create default 4.12.0
 opam install -y z3
 opam install -y why3-ide
+opam install -y why3-coq
 opam install -y utop
 opam install -y sha
 opam install -y ocp-indent
