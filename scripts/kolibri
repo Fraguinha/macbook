@@ -2,6 +2,7 @@
 
 # Variables
 BOUGHT='2610.5' # xtz
+
 OVEN_ADDRESS='KT1AKcRY2F8uZv5psx2gUm7AoTk8Cp6ei4hM'
 KOLIBRI_ADDRESS='KT1Ty2uAmF5JxWyeGrVpk17MEyzVB8cXs8aJ'
 
@@ -32,7 +33,8 @@ debt=$KOLIBRI_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36
 percentage=value/debt*100-100
 print(f'K$ : {percentage:,.2f} %')"
 
-echo "---"
+echo
+echo "--------"
 echo "Protocol"
 
 python3 -c "\
@@ -42,54 +44,63 @@ for i in range(365*24*60):
     apr=apr*initial
 apr=(apr-1)*100
 print(f'Rate: {apr:,.2f} %')"
+
 python3 -c "\
 debt=($KOLIBRI_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**18)/10**18
 print(f'Debt: {debt:,.2f} $')"
+
 python3 -c "\
 interest=($KOLIBRI_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**18-$KUSD)/10**18
 print(f'Interest: {interest:,.2f} $')"
+
 python3 -c "\
 borrowed=$KUSD/10**18
 print(f'Borrowed: {borrowed:,.2f} $')"
+
 python3 -c "\
 value=($OVEN/10**6*$USD)
 debt=$KOLIBRI_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36
 percentage=(debt/(value/2))*100
-print(f'Collateral use: {percentage:,.2f} % | {\"color=darkgreen,green\" if percentage <= 40 else \"color=darkorange,orange\" if 60 <= percentage < 80 else \"color=darkred,red\" if percentage >= 80 else \"\" }')"
+print(f'Collateral use: {percentage:,.2f} %')"
 
-echo "---"
+echo
+echo "----"
 echo "Loan"
 
 python3 -c "\
 print(f'Bought: {$BOUGHT:,.2f} ꜩ')"
+
 python3 -c "\
 value=$BOUGHT*$EUR
 print(f'Value: {value:,.2f} €')"
+
 python3 -c "\
 value=$BOUGHT*$USD
 debt=$KOLIBRI_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36
 diff=(value-debt)*($EUR/$USD)
-print(f'{\"Profit\" if diff >= 0 else \"Loss\"}: {diff:,.2f} € | color={\"darkgreen,green\" if diff >= 0 else \"darkred,red\"}')"
+print(f'{\"Profit\" if diff >= 0 else \"Loss\"}: {diff:,.2f} €')"
+
 python3 -c "\
 value=($BOUGHT*$USD)
 debt=$KOLIBRI_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36
 percentage=value/debt*100-100
-print(f'Percentage: {percentage:,.2f} % | color={\"darkgreen,green\" if percentage >= 0 else \"darkred,red\"}')"
+print(f'Percentage: {percentage:,.2f} %')"
 
-echo "---"
+echo
+echo "----"
 echo "Risk"
 
 python3 -c "\
 price=$USD
 print(f'Price: {price:,.2f} $')"
+
 python3 -c "\
 xtz=($OVEN/10**6)
-value=($OVEN/10**6*$USD)
 debt=$KOLIBRI_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36
 price=(2*debt/xtz)
 margin=$USD-price
-percentage=(debt/(value/2))*100
-print(f'Margin: {margin:,.2f} $ | {\"color=darkgreen,green\" if percentage <= 40 else \"color=darkorange,orange\" if 60 <= percentage < 80 else \"color=darkred,red\" if percentage >= 80 else \"\" }')"
+print(f'Margin: {margin:,.2f} $')"
+
 python3 -c "\
 xtz=($OVEN/10**6)
 debt=$KOLIBRI_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36
