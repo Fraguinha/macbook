@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Variables
-BOUGHT='2610.5' # xtz
+BOUGHT='3010.5' # xtz
 
 OVEN_ADDRESS='KT1AKcRY2F8uZv5psx2gUm7AoTk8Cp6ei4hM'
 KOLIBRI_ADDRESS='KT1Ty2uAmF5JxWyeGrVpk17MEyzVB8cXs8aJ'
