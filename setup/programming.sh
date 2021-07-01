@@ -92,4 +92,5 @@ code \
     --install-extension efoerster.texlab \
     --install-extension Dart-Code.flutter \
     --install-extension Dart-Code.dart-code \
+    --install-extension asvetliakov.vscode-neovim \
     --install-extension analytic-signal.preview-pdf
