@@ -3,6 +3,7 @@ brew install automake
 brew install cask
 brew install cmake
 brew install cvc4
+brew install deno
 brew install expat
 brew install fd
 brew install ffmpeg

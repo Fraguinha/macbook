@@ -74,6 +74,7 @@ code \
     --install-extension ms-vsliveshare.vsliveshare-pack \
     --install-extension ms-vsliveshare.vsliveshare-audio \
     --install-extension ms-vsliveshare.vsliveshare \
+    --install-extension ms-vscode.test-adapter-converter \
     --install-extension ms-vscode.hexeditor \
     --install-extension ms-vscode.cpptools \
     --install-extension ms-vscode.cmake-tools \
@@ -84,11 +85,15 @@ code \
     --install-extension ms-python.vscode-pylance \
     --install-extension ms-python.python \
     --install-extension ms-azuretools.vscode-docker \
+    --install-extension michelemelluso.gitignore \
     --install-extension justusadam.language-haskell \
+    --install-extension hbenl.vscode-test-explorer \
     --install-extension haskell.haskell \
     --install-extension GitLab.gitlab-workflow \
     --install-extension GitHub.vscode-pull-request-github \
+    --install-extension GitHub.remotehub \
     --install-extension GitHub.github-vscode-theme \
+    --install-extension GitHub.copilot \
     --install-extension efoerster.texlab \
     --install-extension Dart-Code.flutter \
     --install-extension Dart-Code.dart-code \
