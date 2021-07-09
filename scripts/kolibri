@@ -91,18 +91,20 @@ echo "----"
 echo "Risk"
 
 python3 -c "\
-price=$USD
-print(f'Price: {price:,.2f} $')"
+price=$EUR
+print(f'Price: {price:,.2f} €')"
 
 python3 -c "\
 xtz=($OVEN/10**6)
 debt=$KOLIBRI_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36
-price=(2*debt/xtz)
-margin=$USD-price
-print(f'Margin: {margin:,.2f} $')"
+usdtoeur=$EUR/$USD
+price=(2*debt/xtz)*usdtoeur
+margin=$EUR-price
+print(f'Margin: {margin:,.2f} €')"
 
 python3 -c "\
 xtz=($OVEN/10**6)
 debt=$KOLIBRI_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36
-price=(2*debt/xtz)
-print(f'Liquidation: {price:,.2f} $')"
+usdtoeur=$EUR/$USD
+price=(2*debt/xtz)*usdtoeur
+print(f'Liquidation: {price:,.2f} €')"

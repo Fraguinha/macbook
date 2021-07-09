@@ -59,6 +59,7 @@ npm i -g npm
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 code \
     --install-extension Zignd.html-css-class-completion \
+    --install-extension wassimdev.windows-nt-vscode-theme \
     --install-extension vscjava.vscode-maven \
     --install-extension vscjava.vscode-java-test \
     --install-extension vscjava.vscode-java-pack \

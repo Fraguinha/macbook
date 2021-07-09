@@ -30,3 +30,5 @@ brew install tree
 brew install zsh-autosuggestions
 brew install zsh-git-prompt
 brew install zsh-history-substring-search
+brew install zsh-vi-mode
+brew install zsh-you-should-use
