@@ -8,7 +8,8 @@ HOME=/Users/fraguinha
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 00 17 * * * { brew update && brew upgrade && brew upgrade --cask && brew cleanup } &> /dev/null
 05 17 * * * { opam update && opam depext && opam upgrade -y && opam clean } &> /dev/null
-10 17 * * * { rustup update } &> /dev/null
+10 17 * * * { ghcup upgrade } &> /dev/null
+15 17 * * * { rustup update } &> /dev/null
 00 18 * * * { cd ~/GitHub/macbook && ./update.sh && ./commit.sh } &> /dev/null
 EOF
 
@@ -49,6 +50,7 @@ pip3 install -U matplotlib
 pip3 install -U jupyter
 pip3 install -U flask
 pip3 install -U coverage
+pip3 install -U beautifulsoup4
 pip3 install -U autopep8
 
 # javascript
@@ -59,7 +61,6 @@ npm i -g npm
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
 code \
     --install-extension Zignd.html-css-class-completion \
-    --install-extension wassimdev.windows-nt-vscode-theme \
     --install-extension vscjava.vscode-maven \
     --install-extension vscjava.vscode-java-test \
     --install-extension vscjava.vscode-java-pack \
