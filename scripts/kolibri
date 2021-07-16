@@ -1,13 +1,17 @@
 #!/bin/sh
 
+# Check internet connection
+nc -G 5 -z 1.1.1.1 80 &>/dev/null
+if [[ $? -eq 0 ]]; then
+
 # Variables
-BOUGHT='3010.5' # xtz
+BOUGHT='3260.5' # xtz
 
 OVEN_ADDRESS='KT1AKcRY2F8uZv5psx2gUm7AoTk8Cp6ei4hM'
 KOLIBRI_ADDRESS='KT1Ty2uAmF5JxWyeGrVpk17MEyzVB8cXs8aJ'
 
 # Price
-PRICE=$(curl -sX GET 'https://api.coingecko.com/api/v3/simple/price?ids=tezos&vs_currencies=eur,usd')
+PRICE=$(curl -sX 'GET' 'https://api.coingecko.com/api/v3/simple/price?ids=tezos&vs_currencies=eur,usd' -H 'accept: application/json')
 
 EUR=$(echo $PRICE | jq --raw-output '.tezos.eur')
 USD=$(echo $PRICE | jq --raw-output '.tezos.usd')
@@ -28,13 +32,13 @@ OVEN_FEE=$(echo $OVEN_STORAGE | jq --raw-output '.stabilityFeeTokens')
 
 # Status
 python3 -c "\
-value=($BOUGHT*$USD)
+xtz=($OVEN/10**6)
 debt=$KOLIBRI_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36
-percentage=value/debt*100-100
-print(f'K$ : {percentage:,.2f} %')"
+usdtoeur=$EUR/$USD
+liquidation=(2*debt/xtz)*usdtoeur
+print(f'kUSD: {liquidation:,.2f} €')"
 
-echo
-echo "--------"
+echo "---"
 echo "Protocol"
 
 python3 -c "\
@@ -63,8 +67,7 @@ debt=$KOLIBRI_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36
 percentage=(debt/(value/2))*100
 print(f'Collateral use: {percentage:,.2f} %')"
 
-echo
-echo "----"
+echo "---"
 echo "Loan"
 
 python3 -c "\
@@ -86,8 +89,7 @@ debt=$KOLIBRI_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36
 percentage=value/debt*100-100
 print(f'Percentage: {percentage:,.2f} %')"
 
-echo
-echo "----"
+echo "---"
 echo "Risk"
 
 python3 -c "\
@@ -106,5 +108,11 @@ python3 -c "\
 xtz=($OVEN/10**6)
 debt=$KOLIBRI_INTEREST*10**18/$OVEN_INTEREST*($KUSD+$OVEN_FEE)/10**36
 usdtoeur=$EUR/$USD
-price=(2*debt/xtz)*usdtoeur
-print(f'Liquidation: {price:,.2f} €')"
+liquidation=(2*debt/xtz)*usdtoeur
+print(f'Liquidation: {liquidation:,.2f} €')"
+
+else
+
+echo "kUSD:  --- €"
+
+fi

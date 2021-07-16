@@ -27,6 +27,7 @@ brew install pypy3
 brew install shellcheck
 brew install texlab
 brew install tree
+brew install wget
 brew install zsh-autosuggestions
 brew install zsh-git-prompt
 brew install zsh-history-substring-search
